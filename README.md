@@ -34,6 +34,17 @@ cd eduroam-flake
 nix run .#install-eduroam-university-bonn
 ```
 
+Warning: Nix flakes are pure. In other words: everything that is fetched needs to be hashed and locked in the `flake.lock` file.
+This `flake.nix` will fail to build if the hashes are not correct (e.g. if the Eduroam.py script changes). There is a super easy fix for this:
+
+```sh
+# Execute the flake without updating the lock file
+nix run 'github:mayniklas/eduroam-flake'#install-eduroam-university-bonn --recreate-lock-file --no-write-lock-file
+
+# Update the flake.lock file
+nix flake lock --update-input eduroam-university-bonn
+```
+
 ### Using a Nix Shell
 
 ```sh
