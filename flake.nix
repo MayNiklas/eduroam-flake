@@ -15,6 +15,8 @@
       url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5133&device=linux&generatedfor=user&openroaming=0";
       flake = false;
     };
+
+    # The Eduroam Python script for the University of Siegen
     eduroam-university-siegen = {
       url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5356&device=linux&generatedfor=user&openroaming=0";
       flake = false;
