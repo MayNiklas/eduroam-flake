@@ -24,6 +24,18 @@
         "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
       }
     },
+    "eduroam-university-siegen": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-jNkWNKTBTaDt/3EDJdXIW/kFeQpLBvs6YcTECv0/Kb0=",
+        "type": "file",
+        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5356"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5356"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1692638711,
@@ -44,6 +56,7 @@
       "inputs": {
         "eduroam-university-bonn": "eduroam-university-bonn",
         "eduroam-university-koeln": "eduroam-university-koeln",
+        "eduroam-university-siegen": "eduroam-university-siegen",
         "nixpkgs": "nixpkgs"
       }
     }

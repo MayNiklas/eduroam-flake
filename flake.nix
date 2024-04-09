@@ -15,6 +15,10 @@
       url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5133&device=linux&generatedfor=user&openroaming=0";
       flake = false;
     };
+    eduroam-university-siegen = {
+      url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5356&device=linux&generatedfor=user&openroaming=0";
+      flake = false;
+    };
   };
 
   outputs = { self, ... }@inputs:
@@ -39,6 +43,10 @@
           # nix run .#install-eduroam-university-bonn
           install-eduroam-university-bonn = pkgs.writeShellScriptBin "install-eduroam-university-bonn"
             "${python-with-dbus}/bin/python3 ${eduroam-university-bonn}";
+
+          # nix run .#install-eduroam-university-bonn
+          install-eduroam-university-siegen = pkgs.writeShellScriptBin "install-eduroam-university-siegen"
+            "${python-with-dbus}/bin/python3 ${eduroam-university-siegen}";
 
           # nix run .#install-eduroam-university-koeln
           install-eduroam-university-koeln = pkgs.writeShellScriptBin "install-eduroam-university-koeln"
