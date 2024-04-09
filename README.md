@@ -94,7 +94,8 @@ Reviewing this file manually tells us a lot about how Nix works!
 
 ## Supported Universities:
 
-| University       | entityID | command                                      |
-| ---------------- | -------- | -------------------------------------------- |
-| Universität Bonn | 5138     | `nix run .#install-eduroam-university-bonn`  |
-| Universität Köln | 5133     | `nix run .#install-eduroam-university-koeln` |
+| University        | entityID | command                                       |
+| ----------------- | -------- | --------------------------------------------- |
+| Universität Bonn  | 5138     | `nix run .#install-eduroam-university-bonn`   |
+| Universität Köln  | 5133     | `nix run .#install-eduroam-university-koeln`  |
+| Universität Siegen| 5356     | `nix run .#install-eduroam-university-siegen` |
