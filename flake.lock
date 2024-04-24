@@ -1,9 +1,21 @@
 {
   "nodes": {
+    "eduroam-lund-university": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-deh/4I+/q5PWJbCqRgxglz1bMRBGsm6f69xybhlmCbc=",
+        "type": "file",
+        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=1338"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=1338"
+      }
+    },
     "eduroam-university-bonn": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-YNJPdcgOf5nzvxcMXWbRaQkgaCCFm1TrueEJoxDGAf4=",
+        "narHash": "sha256-5LB1IvwVk8k0gwBT0cdmvY5MpOJcGfqGQCgqgk8NSr4=",
         "type": "file",
         "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
       },
@@ -15,7 +27,7 @@
     "eduroam-university-koeln": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-YNJPdcgOf5nzvxcMXWbRaQkgaCCFm1TrueEJoxDGAf4=",
+        "narHash": "sha256-5LB1IvwVk8k0gwBT0cdmvY5MpOJcGfqGQCgqgk8NSr4=",
         "type": "file",
         "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
       },
@@ -38,11 +50,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1692638711,
-        "narHash": "sha256-J0LgSFgJVGCC1+j5R2QndadWI1oumusg6hCtYAzLID4=",
+        "lastModified": 1713714899,
+        "narHash": "sha256-+z/XjO3QJs5rLE5UOf015gdVauVRQd2vZtsFkaXBq2Y=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+        "rev": "6143fc5eeb9c4f00163267708e26191d1e918932",
         "type": "github"
       },
       "original": {
@@ -54,6 +66,7 @@
     },
     "root": {
       "inputs": {
+        "eduroam-lund-university": "eduroam-lund-university",
         "eduroam-university-bonn": "eduroam-university-bonn",
         "eduroam-university-koeln": "eduroam-university-koeln",
         "eduroam-university-siegen": "eduroam-university-siegen",
