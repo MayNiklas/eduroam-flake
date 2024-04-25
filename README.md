@@ -98,4 +98,5 @@ Reviewing this file manually tells us a lot about how Nix works!
 | ----------------- | -------- | --------------------------------------------- |
 | Universität Bonn  | 5138     | `nix run .#install-eduroam-university-bonn`   |
 | Universität Köln  | 5133     | `nix run .#install-eduroam-university-koeln`  |
+| Lund University   | 1338     | `nix run .#install-eduroam-lund-university`   |
 | Universität Siegen| 5356     | `nix run .#install-eduroam-university-siegen` |

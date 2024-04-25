@@ -16,6 +16,12 @@
       flake = false;
     };
 
+    # The Eduroam Python script for Lund University
+    eduroam-lund-university = {
+      url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=1338&device=linux&generatedfor=user&openroaming=0";
+      flake = false;
+    };
+
     # The Eduroam Python script for the University of Siegen
     eduroam-university-siegen = {
       url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5356&device=linux&generatedfor=user&openroaming=0";
@@ -46,13 +52,18 @@
           install-eduroam-university-bonn = pkgs.writeShellScriptBin "install-eduroam-university-bonn"
             "${python-with-dbus}/bin/python3 ${eduroam-university-bonn}";
 
-          # nix run .#install-eduroam-university-bonn
-          install-eduroam-university-siegen = pkgs.writeShellScriptBin "install-eduroam-university-siegen"
-            "${python-with-dbus}/bin/python3 ${eduroam-university-siegen}";
-
           # nix run .#install-eduroam-university-koeln
           install-eduroam-university-koeln = pkgs.writeShellScriptBin "install-eduroam-university-koeln"
             "${python-with-dbus}/bin/python3 ${eduroam-university-koeln}";
+
+          # nix run .#install-eduroam-lund-university
+          install-eduroam-lund-university = pkgs.writeShellScriptBin "install-eduroam-university-lund"
+            "${python-with-dbus}/bin/python3 ${eduroam-lund-university}";
+
+          # nix run .#install-eduroam-university-siegen
+          install-eduroam-university-siegen = pkgs.writeShellScriptBin "install-eduroam-university-siegen"
+            "${python-with-dbus}/bin/python3 ${eduroam-university-siegen}";
+
         });
     };
 }
