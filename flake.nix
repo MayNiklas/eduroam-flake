@@ -27,6 +27,12 @@
       url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5356&device=linux&generatedfor=user&openroaming=0";
       flake = false;
     };
+
+    # The Eduroam Python script for Leipzig University
+    eduroam-university-leipzig = {
+      url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5674&device=linux&generatedfor=user&openroaming=0";
+      flake = false;
+    };
   };
 
   outputs = { self, ... }@inputs:
@@ -63,6 +69,10 @@
           # nix run .#install-eduroam-university-siegen
           install-eduroam-university-siegen = pkgs.writeShellScriptBin "install-eduroam-university-siegen"
             "${python-with-dbus}/bin/python3 ${eduroam-university-siegen}";
+
+          # nix run .#install-eduroam-university-leipzig
+          install-eduroam-university-leipzig = pkgs.writeShellScriptBin "install-eduroam-university-leipzig"
+            "${python-with-dbus}/bin/python3 ${eduroam-university-leipzig}";
 
         });
     };
