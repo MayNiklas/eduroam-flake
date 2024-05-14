@@ -27,6 +27,12 @@
       url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5356&device=linux&generatedfor=user&openroaming=0";
       flake = false;
     };
+
+    # The Eduroam Python script for Saarland University
+    eduroam-saarland-university = {
+      url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=10315&device=linux&generatedfor=user&openroaming=0";
+      flake = false;
+    };
   };
 
   outputs = { self, ... }@inputs:
@@ -64,6 +70,9 @@
           install-eduroam-university-siegen = pkgs.writeShellScriptBin "install-eduroam-university-siegen"
             "${python-with-dbus}/bin/python3 ${eduroam-university-siegen}";
 
+          # nix run .#install-eduroam-saarland-university
+          install-eduroam-saarland-university = pkgs.writeShellScriptBin "install-eduroam-saarland-university"
+            "${python-with-dbus}/bin/python3 ${eduroam-saarland-university}";
         });
     };
 }

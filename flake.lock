@@ -12,6 +12,18 @@
         "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=1338"
       }
     },
+    "eduroam-saarland-university": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-WYjWQyWGsYiSu+Xu3w29VcKiQtEegWTy8zJBZ5dCB1U=",
+        "type": "file",
+        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=10315"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=10315"
+      }
+    },
     "eduroam-university-bonn": {
       "flake": false,
       "locked": {
@@ -67,6 +79,7 @@
     "root": {
       "inputs": {
         "eduroam-lund-university": "eduroam-lund-university",
+        "eduroam-saarland-university": "eduroam-saarland-university",
         "eduroam-university-bonn": "eduroam-university-bonn",
         "eduroam-university-koeln": "eduroam-university-koeln",
         "eduroam-university-siegen": "eduroam-university-siegen",
