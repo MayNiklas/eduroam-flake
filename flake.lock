@@ -1,77 +1,5 @@
 {
   "nodes": {
-    "eduroam-lund-university": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-deh/4I+/q5PWJbCqRgxglz1bMRBGsm6f69xybhlmCbc=",
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=1338"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=1338"
-      }
-    },
-    "eduroam-saarland-university": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-WYjWQyWGsYiSu+Xu3w29VcKiQtEegWTy8zJBZ5dCB1U=",
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=10315"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=10315"
-      }
-    },
-    "eduroam-university-bonn": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-5LB1IvwVk8k0gwBT0cdmvY5MpOJcGfqGQCgqgk8NSr4=",
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
-      }
-    },
-    "eduroam-university-koeln": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-5LB1IvwVk8k0gwBT0cdmvY5MpOJcGfqGQCgqgk8NSr4=",
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5133"
-      }
-    },
-    "eduroam-university-leipzig": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-uoMQZSvXg3lgJRr67E9wqfsfGKdPNose7WYrpHrtspg=",
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5674"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5674"
-      }
-    },
-    "eduroam-university-siegen": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-jNkWNKTBTaDt/3EDJdXIW/kFeQpLBvs6YcTECv0/Kb0=",
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5356"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://cat.eduroam.org/user/API.php?action=downloadInstaller&device=linux&generatedfor=user&lang=en&openroaming=0&profile=5356"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1713895582,
@@ -90,12 +18,6 @@
     },
     "root": {
       "inputs": {
-        "eduroam-lund-university": "eduroam-lund-university",
-        "eduroam-saarland-university": "eduroam-saarland-university",
-        "eduroam-university-bonn": "eduroam-university-bonn",
-        "eduroam-university-koeln": "eduroam-university-koeln",
-        "eduroam-university-leipzig": "eduroam-university-leipzig",
-        "eduroam-university-siegen": "eduroam-university-siegen",
         "nixpkgs": "nixpkgs"
       }
     }
