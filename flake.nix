@@ -17,27 +17,27 @@
       unis = [
         {
           name = "leipzig";
-          url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5674&device=linux&generatedfor=user&openroaming=0";
+          id 5674;
         }
         {
           name = "bonn";
-          url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5133&device=linux&generatedfor=user&openroaming=0";
+          id = 5133;
         }
         {
           name = "saarland";
-          url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=10315&device=linux&generatedfor=user&openroaming=0";
+          id = 10315;
         }
         {
           name = "siegen";
-          url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5356&device=linux&generatedfor=user&openroaming=0";
+          id = 5356;
         }
         {
           name = "lund";
-          url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=1338&device=linux&generatedfor=user&openroaming=0";
+          id = 1338;
         }
         {
           name = "koeln";
-
+          id = 5133;
           url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5133&device=linux&generatedfor=user&openroaming=0";
         }
       ];
@@ -52,7 +52,7 @@
             url,
           }:
             pkgs.writeShellScriptBin "install-eduroam-${name}" ''
-              "${python-with-dbus}/bin/python3 ${url}"
+              "${python-with-dbus}/bin/python3 https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${id}&device=linux&generatedfor=user&openroaming=0"
             '';
         in
           builtins.listToAttrs (builtins.map (item: {
