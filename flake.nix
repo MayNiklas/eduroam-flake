@@ -17,7 +17,7 @@
       unis = [
         {
           name = "leipzig";
-          id 5674;
+          id = 5674;
         }
         {
           name = "bonn";
@@ -38,7 +38,6 @@
         {
           name = "koeln";
           id = 5133;
-          url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=5133&device=linux&generatedfor=user&openroaming=0";
         }
       ];
     in {
@@ -49,10 +48,10 @@
           python-with-dbus = pkgs.python3.withPackages (p: with p; [dbus-python]);
           mkScript = {
             name,
-            url,
+            id,
           }:
             pkgs.writeShellScriptBin "install-eduroam-${name}" ''
-              "${python-with-dbus}/bin/python3 https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${id}&device=linux&generatedfor=user&openroaming=0"
+              "${python-with-dbus}/bin/python3 https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${builtins.toString id}&device=linux&generatedfor=user&openroaming=0"
             '';
         in
           builtins.listToAttrs (builtins.map (item: {
