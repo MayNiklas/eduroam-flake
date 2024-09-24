@@ -5,15 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = {self, ...} @ inputs:
+  outputs = { self, ... } @ inputs:
     with inputs; let
-      supportedSystems = ["aarch64-linux" "x86_64-linux"];
+      supportedSystems = [ "aarch64-linux" "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
-      nixpkgsFor = forAllSystems (system:
-        import nixpkgs {
-          inherit system;
-          overlays = [];
-        });
+      nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; overlays = [ ]; });
       unis = [
         {
           name = "leipzig";
@@ -40,25 +36,23 @@
           id = 5133;
         }
       ];
-    in {
+    in
+    {
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixpkgs-fmt);
-      packages = forAllSystems (
-        system: let
+      packages = forAllSystems (system:
+        let
           pkgs = nixpkgsFor.${system};
-          python-with-dbus = pkgs.python3.withPackages (p: with p; [dbus-python]);
-          mkScript = {
-            name,
-            id,
-          }:
+          python-with-dbus = pkgs.python3.withPackages (p: with p; [ dbus-python ]);
+          mkScript = { name, id, }:
             pkgs.writeShellScriptBin "install-eduroam-${name}" ''
-              "${python-with-dbus}/bin/python3 https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${builtins.toString id}&device=linux&generatedfor=user&openroaming=0"
+              ${python-with-dbus}/bin/python <(${pkgs.wget}/bin/wget -qO- "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${builtins.toString id}&device=linux&generatedfor=user&openroaming=0")
             '';
         in
-          builtins.listToAttrs (builtins.map (item: {
-              name = "install-eduroam-${item.name}";
-              value = mkScript item;
-            })
-            unis)
-      );
+        builtins.listToAttrs (builtins.map
+          (item: {
+            name = "install-eduroam-${item.name}";
+            value = mkScript item;
+          })
+          unis));
     };
 }
