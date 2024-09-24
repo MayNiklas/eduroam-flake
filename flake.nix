@@ -11,30 +11,12 @@
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       nixpkgsFor = forAllSystems (system: import nixpkgs { inherit system; overlays = [ ]; });
       unis = [
-        {
-          name = "leipzig";
-          id = 5674;
-        }
-        {
-          name = "bonn";
-          id = 5133;
-        }
-        {
-          name = "saarland";
-          id = 10315;
-        }
-        {
-          name = "siegen";
-          id = 5356;
-        }
-        {
-          name = "lund";
-          id = 1338;
-        }
-        {
-          name = "koeln";
-          id = 5133;
-        }
+        { name = "bonn"; id = 5133; }
+        { name = "koeln"; id = 5133; }
+        { name = "leipzig"; id = 5674; }
+        { name = "lund"; id = 1338; }
+        { name = "saarland"; id = 10315; }
+        { name = "siegen"; id = 5356; }
       ];
     in
     {
