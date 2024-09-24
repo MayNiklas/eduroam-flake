@@ -48,11 +48,18 @@
               ${python-with-dbus}/bin/python <(${pkgs.wget}/bin/wget -qO- "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${builtins.toString id}&device=linux&generatedfor=user&openroaming=0")
             '';
         in
-        builtins.listToAttrs (builtins.map
-          (item: {
-            name = "install-eduroam-${item.name}";
-            value = mkScript item;
-          })
-          unis));
+        builtins.listToAttrs
+          (builtins.map
+            (item: {
+              name = "install-eduroam-${item.name}";
+              value = mkScript item;
+            })
+            unis)
+        //
+        {
+          # nix run .#list-eduroam-entityIDs
+          list-eduroam-entityIDs = pkgs.writeShellScriptBin "list-eduroam-entityIDs"
+            "${pkgs.curl}/bin/curl 'https://cat.eduroam.org/user/API.php?action=listAllIdentityProviders&api' | ${pkgs.jq}/bin/jq";
+        });
     };
 }
