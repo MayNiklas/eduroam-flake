@@ -25,22 +25,21 @@
         let
           pkgs = nixpkgsFor.${system};
           python-with-dbus = pkgs.python3.withPackages (p: with p; [ dbus-python ]);
-          mkScript = { name, id, hash ? "", }:
-            let
-              script = pkgs.fetchurl {
-                url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${builtins.toString id}&device=linux&generatedfor=user&openroaming=0";
-                sha256 = hash;
-              };
-            in
-            pkgs.writeShellScriptBin "install-eduroam-${name}" ''
-              ${python-with-dbus}/bin/python ${script}
-            '';
         in
         builtins.listToAttrs
           (builtins.map
             (item: {
               name = "install-eduroam-${item.name}";
-              value = mkScript item;
+              value = ({ name, id, hash ? "", }:
+                let
+                  script = pkgs.fetchurl {
+                    url = "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=${builtins.toString id}&device=linux&generatedfor=user&openroaming=0";
+                    sha256 = hash;
+                  };
+                in
+                pkgs.writeShellScriptBin "install-eduroam-${name}" ''
+                  ${python-with-dbus}/bin/python ${script}
+                '') item;
             })
             unis)
         //
