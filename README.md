@@ -14,36 +14,26 @@ In case you are not familiar with Nix, but you need to help a NixOS user to inst
 
 Take a look at the `flake.nix` file. All this flake does:
 
-1. Copy the python script into the nix store
+1. fetch the python script
 2. Execute it with Python3 and the dependencies needed
 
-It should be easy to verify what it does, since all URL's are listed.
-The `flake.lock` file contains the hashes of the files.
-This README also describes how to extend the flake for other Universities. 
-
+The URLs are generated from the eduroam ID corresponding to your institution.
 
 Execute the script from GitHub directly:
+
 ```sh
-nix run 'github:mayniklas/eduroam-flake'#install-eduroam-university-bonn
+nix run 'github:mayniklas/eduroam-flake'#install-eduroam-bonn
 ```
 
 Execute the script from a local clone:
+
 ```sh
 git clone https://github.com/MayNiklas/eduroam-flake.git
 cd eduroam-flake
-nix run .#install-eduroam-university-bonn
+nix run .#install-eduroam-bonn
 ```
 
-Warning: Nix flakes are pure. In other words: everything that is fetched needs to be hashed and locked in the `flake.lock` file.
-This `flake.nix` will fail to build if the hashes are not correct (e.g. if the Eduroam.py script changes). There is a super easy fix for this:
-
-```sh
-# Execute the flake without updating the lock file
-nix run 'github:mayniklas/eduroam-flake'#install-eduroam-university-bonn --recreate-lock-file --no-write-lock-file
-
-# Update the flake.lock file
-nix flake lock --update-input eduroam-university-bonn
-```
+or list all available scripts with `nix flake show`
 
 ### Using a Nix Shell
 
@@ -83,9 +73,13 @@ Find your University's entityID:
 nix run .#list-eduroam-entityIDs
 ```
 
-Create a new entry under `inputs` as well as in the `packages`section of `flake.nix`.
+Then add your university to the list using it's name and the id that is used to fetch the script.
 
 Then run the `nix run` command.
+
+The first run will fail, because the hash of the python script is not known yet.
+The error message will tell you the hash of the python script.
+Add the hash to the university's entry.
 
 Nice to know:
 To build a Nix package, just run `nix build .#install-eduroam-bonn`.
@@ -94,9 +88,10 @@ Reviewing this file manually tells us a lot about how Nix works!
 
 ## Supported Universities:
 
-| University        | entityID | command                                       |
-| ----------------- | -------- | --------------------------------------------- |
-| Universität Bonn  | 5138     | `nix run .#install-eduroam-university-bonn`   |
-| Universität Köln  | 5133     | `nix run .#install-eduroam-university-koeln`  |
-| Lund University   | 1338     | `nix run .#install-eduroam-lund-university`   |
-| Universität Siegen| 5356     | `nix run .#install-eduroam-university-siegen` |
+| University         | entityID | command                                |
+| ------------------ | -------- | -------------------------------------- |
+| Universität Bonn   | 5138     | `nix run .#install-eduroam-bonn`       |
+| Universität Köln   | 5133     | `nix run .#install-eduroam-koeln`      |
+| Lund University    | 1338     | `nix run .#install-eduroam-university` |
+| Universität Siegen | 5356     | `nix run .#install-eduroam-siegen`     |
+| University Leipzig | 5674     | `nix run .#install-eduroam-leipzig`    |
