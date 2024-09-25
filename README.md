@@ -63,8 +63,6 @@ Next month I'm giving a talk about Nix and since we need to login into Eduroam d
 
 Also: it took me some time to figure out, you need to use `dbus-python` instead of `pydbus`. This repository might save people time in case they find it by googling `NixOS Eduroam`. This repository might be helpful for documentation purposes.
 
-The script is fetched at runtime and is not cached in the nix store anymore. This not only disables hash verification but also does not cache the python script in the nix store.
-
 ## Usage
 
 > This script assumes you are using NetworkManager.
@@ -78,6 +76,10 @@ nix run .#list-eduroam-entityIDs
 Then add your university to the list using it's name and the id that is used to fetch the script.
 
 Then run the `nix run` command.
+
+The first run will fail, because the hash of the python script is not known yet.
+The error message will tell you the hash of the python script.
+Add the hash to the university's entry.
 
 Nice to know:
 To build a Nix package, just run `nix build .#install-eduroam-bonn`.
