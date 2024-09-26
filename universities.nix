@@ -5,6 +5,7 @@
 # 3. add the hash from the error to the list entry
 [
   { name = "bonn"; id = 5133; hash = "sha256-uPVriEsQAkjibFm0E2xXtXyD2UVddjPMv2gQfRgKIao="; }
+  { name = "flensburg"; id = 5188; hash = "sha256-RRnZbVbFg86GXIOxVChO2e5OoOWu0uzb/3IviECH1GU="; }
   { name = "koeln"; id = 5133; hash = "sha256-uPVriEsQAkjibFm0E2xXtXyD2UVddjPMv2gQfRgKIao="; }
   { name = "leipzig"; id = 5674; hash = "sha256-Clybdol+M5yRYBDxst+14ffThQ/VDYaYeUo6FYyGMpg="; }
   { name = "lund"; id = 1338; hash = "sha256-8pEpF8YC8VZC76fWio6vtupkYEZTeh/f46pyakbVdF0="; }
