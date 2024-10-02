@@ -93,7 +93,7 @@ Reviewing this file manually tells us a lot about how Nix works!
 | Universität Bonn                  | 5138     | `nix run .#install-eduroam-bonn`       |
 | Hochschule Flensburg              | 5188     | `nix run .#install-eduroam-flensburg`  |
 | Universität Köln                  | 5133     | `nix run .#install-eduroam-koeln`      |
-| Lund University                   | 1338     | `nix run .#install-eduroam-university` |
+| Lund University                   | 1338     | `nix run .#install-eduroam-lund` |
 | Universität Siegen                | 5356     | `nix run .#install-eduroam-siegen`     |
 | University Leipzig                | 5674     | `nix run .#install-eduroam-leipzig`    |
 | Virginia Community College System | 11835    | `nix run .#install-eduroam-vccs`       |
