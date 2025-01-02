@@ -27,7 +27,7 @@
   {
     name = "lund";
     id = 1338;
-    hash = "sha256-8pEpF8YC8VZC76fWio6vtupkYEZTeh/f46pyakbVdF0=";
+    hash = "sha256-Nln7adqpalZkqSM5AOkN2U1CAQ/T3BmJkNEMeDU4YDg=";
   }
   {
     name = "saarland";
