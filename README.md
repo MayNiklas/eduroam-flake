@@ -97,3 +97,4 @@ Reviewing this file manually tells us a lot about how Nix works!
 | Universität Siegen                | 5356     | `nix run .#install-eduroam-siegen`     |
 | University Leipzig                | 5674     | `nix run .#install-eduroam-leipzig`    |
 | Virginia Community College System | 11835    | `nix run .#install-eduroam-vccs`       |
+| University of Strathclyde         | 2316     | `nix run .#install-eduroam-strathclyde`|

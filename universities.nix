@@ -12,4 +12,5 @@
   { name = "saarland"; id = 10315; hash = "sha256-JPR4qeU4TXkaxeDhnXN+DJ8h3Sz5K8b+FNm3UhPoo1I="; }
   { name = "siegen"; id = 5356; hash = "sha256-fyUno1PytodSyV/fMKqdfAGHZxa3C3m2Nfeskkaotnk="; }
   { name = "vccs"; id = 11835; hash = "sha256-CdO0zwkhBbhkH53yzPMr+EwflZjUTPeOY1XVKHEwIKY="; }
+  { name = "strathclyde"; id = 2316; hash = "sha256-dJnWBZRlEepb4urU0whESNenbF+GGskvK6NYd+yfrR4="; }
 ]
