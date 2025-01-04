@@ -4,13 +4,13 @@
 # 2. run `nix build .\#install-eduroam-new`
 # 3. add the hash from the error to the list entry
 [
-  { name = "bonn"; id = 5133; hash = "sha256-uPVriEsQAkjibFm0E2xXtXyD2UVddjPMv2gQfRgKIao="; }
-  { name = "flensburg"; id = 5188; hash = "sha256-RRnZbVbFg86GXIOxVChO2e5OoOWu0uzb/3IviECH1GU="; }
-  { name = "koeln"; id = 5133; hash = "sha256-uPVriEsQAkjibFm0E2xXtXyD2UVddjPMv2gQfRgKIao="; }
-  { name = "leipzig"; id = 5674; hash = "sha256-Clybdol+M5yRYBDxst+14ffThQ/VDYaYeUo6FYyGMpg="; }
-  { name = "lund"; id = 1338; hash = "sha256-8pEpF8YC8VZC76fWio6vtupkYEZTeh/f46pyakbVdF0="; }
-  { name = "saarland"; id = 10315; hash = "sha256-JPR4qeU4TXkaxeDhnXN+DJ8h3Sz5K8b+FNm3UhPoo1I="; }
-  { name = "siegen"; id = 5356; hash = "sha256-fyUno1PytodSyV/fMKqdfAGHZxa3C3m2Nfeskkaotnk="; }
-  { name = "vccs"; id = 11835; hash = "sha256-CdO0zwkhBbhkH53yzPMr+EwflZjUTPeOY1XVKHEwIKY="; }
-  { name = "strathclyde"; id = 2316; hash = "sha256-dJnWBZRlEepb4urU0whESNenbF+GGskvK6NYd+yfrR4="; }
+  { name = "bonn"; id = 5133; hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E="; }
+  { name = "flensburg"; id = 5188; hash = "sha256-cZecZECAkbzMc8vPOM0DsHh2HkbRxO/AyyOj0sQ7Gmg="; }
+  { name = "koeln"; id = 5133; hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E="; }
+  { name = "leipzig"; id = 5674; hash = "sha256-MQwu1RCMH3H4mAPCdEvGNLbTuwcl8lUuFY9E5orjbZs="; }
+  { name = "lund"; id = 1338; hash = "sha256-Nln7adqpalZkqSM5AOkN2U1CAQ/T3BmJkNEMeDU4YDg="; }
+  { name = "saarland"; id = 10315; hash = "sha256-4OvnApFKD3zz0Xh/y7S6C1uRvyhgPCKBYHd/bhnmeeo="; }
+  { name = "siegen"; id = 5356; hash = "sha256-qBGoeIWfYvDVZaxK6uEjPdIaKeBll0UYIEtoN8swInk="; }
+  { name = "vccs"; id = 11835; hash = "sha256-K57+R1cuubAGIyewy9kFWNxwbiuoxAxDecqM3zcv3KY="; }
+  { name = "strathclyde"; id = 2316; hash = "sha256-oumaKcSRF8RrdQ0dHbNXN8w6Y5YlLNXnuglVq9srvU0="; }
 ]
