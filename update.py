@@ -3,10 +3,11 @@
 
 # This script updates the hashes in the universities.nix file
 
-import subprocess
-import hashlib
 import base64
+import hashlib
 import json
+import subprocess
+
 import requests
 
 
@@ -57,6 +58,8 @@ for university in universities:
     )
     if university["hash"] is None:
         continue
+    elif not sri_hash:
+        print("Failed getting hash. Check the university's profile ID.")
     elif sri_hash != university["hash"]:
         print(f"Hash mismatch for {university['name']} ({university['id']})")
         print(f"Expected: {university['hash']}")
