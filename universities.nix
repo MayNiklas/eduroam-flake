@@ -14,4 +14,5 @@
   { name = "vccs"; id = 11835; hash = "sha256-K57+R1cuubAGIyewy9kFWNxwbiuoxAxDecqM3zcv3KY="; }
   { name = "strathclyde"; id = 2316; hash = "sha256-oumaKcSRF8RrdQ0dHbNXN8w6Y5YlLNXnuglVq9srvU0="; }
   { name = "udl"; id = 5824; hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM="; }
+  { name = "tum"; id = 5155; hash = "sha256-MhkJhdgyx4F+7xtWAHsjIcLD8zH3sK8cA5P6IDlllHY="; }
 ]
