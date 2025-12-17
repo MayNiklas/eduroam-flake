@@ -7,7 +7,7 @@
   { name = "bonn"; id = 5133; hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E="; }
   { name = "flensburg"; id = 5188; hash = "sha256-cZecZECAkbzMc8vPOM0DsHh2HkbRxO/AyyOj0sQ7Gmg="; }
   { name = "koeln"; id = 5133; hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E="; }
-  { name = "leipzig"; id = 5674; hash = "sha256-75mHJNXiP+SOeoMQhmfbYm97TqYHVJejxCKeT5l5Qc8="; }
+  { name = "leipzig"; id = 5674; hash = "sha256-TEYTR8TeRNIIZcUx01j9pfedkk0PF5XuXPAVUyI136E="; }
   { name = "lund"; id = 1338; hash = "sha256-Nln7adqpalZkqSM5AOkN2U1CAQ/T3BmJkNEMeDU4YDg="; }
   { name = "saarland"; id = 10315; hash = "sha256-4OvnApFKD3zz0Xh/y7S6C1uRvyhgPCKBYHd/bhnmeeo="; }
   { name = "siegen"; id = 5356; hash = "sha256-qBGoeIWfYvDVZaxK6uEjPdIaKeBll0UYIEtoN8swInk="; }
