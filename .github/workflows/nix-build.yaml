@@ -2,9 +2,9 @@ name: Nix Build
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   pull_request:
-    branches: ["master"]
+    branches: ["main"]
   schedule: # execute every week
     - cron: "0 0 * * 0"
 
