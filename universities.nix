@@ -4,50 +4,13 @@
 # 2. run `nix build .\#install-eduroam-new`
 # 3. add the hash from the error to the list entry
 [
-  {
-    name = "bonn";
-    id = 5133;
-    # hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E=";
-    hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI=";
-  }
-  {
-    name = "flensburg";
-    id = 5188;
-    hash = "sha256-RrYwPolob6+xwQn8MTPHVLUI/W4oNYAFSAtHEc0dNR0=";
-  }
-  {
-    name = "koeln";
-    id = 5133;
-    hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI=";
-  }
-  {
-    name = "leipzig";
-    id = 5674;
-    hash = "sha256-TEYTR8TeRNIIZcUx01j9pfedkk0PF5XuXPAVUyI136E=";
-  }
-  {
-    name = "lund";
-    id = 1338;
-    hash = "sha256-wFE3m9NKq3RkPXdbwVOuhHkozI2J2qvVjnVwjq9qAK4=";
-  }
-  {
-    name = "siegen";
-    id = 5356;
-    hash = "sha256-oiCKmaFXbLz+q8bbYx7ZkstDr0bQOOUv/mcktMzFQ90=";
-  }
-  {
-    name = "vccs";
-    id = 11835;
-    hash = "sha256-iMvG6oEoa7HvIkZwaOsU1tUuGnHk8+LNHlzlRPeZa44=";
-  }
-  {
-    name = "strathclyde";
-    id = 2316;
-    hash = "sha256-pJ8geu1MToF9VSJth+BgJ/ut0rwBnseGD+WILsPcWZI=";
-  }
-  {
-    name = "udl";
-    id = 5824;
-    hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM=";
-  }
+  { name = "bonn"; id = 5133; hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI="; }
+  { name = "flensburg"; id = 5188; hash = "sha256-RrYwPolob6+xwQn8MTPHVLUI/W4oNYAFSAtHEc0dNR0="; }
+  { name = "koeln"; id = 5133; hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI="; }
+  { name = "leipzig"; id = 5674; hash = "sha256-TEYTR8TeRNIIZcUx01j9pfedkk0PF5XuXPAVUyI136E="; }
+  { name = "lund"; id = 1338; hash = "sha256-wFE3m9NKq3RkPXdbwVOuhHkozI2J2qvVjnVwjq9qAK4="; }
+  { name = "siegen"; id = 5356; hash = "sha256-oiCKmaFXbLz+q8bbYx7ZkstDr0bQOOUv/mcktMzFQ90="; }
+  { name = "strathclyde"; id = 2316; hash = "sha256-pJ8geu1MToF9VSJth+BgJ/ut0rwBnseGD+WILsPcWZI="; }
+  { name = "udl"; id = 5824; hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM="; }
+  { name = "vccs"; id = 11835; hash = "sha256-iMvG6oEoa7HvIkZwaOsU1tUuGnHk8+LNHlzlRPeZa44="; }
 ]
