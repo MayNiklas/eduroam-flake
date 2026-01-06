@@ -4,15 +4,16 @@
 # 2. run `nix build .\#install-eduroam-new`
 # 3. add the hash from the error to the list entry
 [
-  { name = "bonn"; id = 5133; hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E="; }
-  { name = "flensburg"; id = 5188; hash = "sha256-cZecZECAkbzMc8vPOM0DsHh2HkbRxO/AyyOj0sQ7Gmg="; }
-  { name = "koeln"; id = 5133; hash = "sha256-X+eq9TXuCfy8Iea8MjFhk/hk+xRnjtpEPmLZgRCvv0E="; }
-  { name = "leipzig"; id = 5674; hash = "sha256-75mHJNXiP+SOeoMQhmfbYm97TqYHVJejxCKeT5l5Qc8="; }
-  { name = "lund"; id = 1338; hash = "sha256-Nln7adqpalZkqSM5AOkN2U1CAQ/T3BmJkNEMeDU4YDg="; }
-  { name = "saarland"; id = 10315; hash = "sha256-4OvnApFKD3zz0Xh/y7S6C1uRvyhgPCKBYHd/bhnmeeo="; }
-  { name = "siegen"; id = 5356; hash = "sha256-qBGoeIWfYvDVZaxK6uEjPdIaKeBll0UYIEtoN8swInk="; }
-  { name = "vccs"; id = 11835; hash = "sha256-K57+R1cuubAGIyewy9kFWNxwbiuoxAxDecqM3zcv3KY="; }
-  { name = "strathclyde"; id = 2316; hash = "sha256-oumaKcSRF8RrdQ0dHbNXN8w6Y5YlLNXnuglVq9srvU0="; }
+  { name = "bonn"; id = 5133; hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI="; }
+  { name = "flensburg"; id = 5188; hash = "sha256-RrYwPolob6+xwQn8MTPHVLUI/W4oNYAFSAtHEc0dNR0="; }
+  { name = "koeln"; id = 5133; hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI="; }
+  { name = "leipzig"; id = 5674; hash = "sha256-TEYTR8TeRNIIZcUx01j9pfedkk0PF5XuXPAVUyI136E="; }
+  { name = "lund"; id = 1338; hash = "sha256-wFE3m9NKq3RkPXdbwVOuhHkozI2J2qvVjnVwjq9qAK4="; }
+  { name = "siegen"; id = 5356; hash = "sha256-oiCKmaFXbLz+q8bbYx7ZkstDr0bQOOUv/mcktMzFQ90="; }
+  { name = "strathclyde"; id = 2316; hash = "sha256-pJ8geu1MToF9VSJth+BgJ/ut0rwBnseGD+WILsPcWZI="; }
+  { name = "tudo"; id = 5411; hash = "sha256-/aRaVJIGNkmMNb2gIL04/l+N5cqU/bJzxod9DR4/NeQ="; }
+  { name = "tum"; id = 5155; hash = "sha256-MhkJhdgyx4F+7xtWAHsjIcLD8zH3sK8cA5P6IDlllHY="; }
   { name = "udl"; id = 5824; hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM="; }
   { name = "roskilde"; id = 949; hash = "sha256-OBPXTDs4Bm+TIdR4r5hP087F3pte9CyL3+Re2yN5OIs="; }
+  { name = "vccs"; id = 11835; hash = "sha256-iMvG6oEoa7HvIkZwaOsU1tUuGnHk8+LNHlzlRPeZa44="; }
 ]
