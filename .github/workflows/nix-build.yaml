@@ -1,0 +1,22 @@
+name: Nix Build
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  schedule: # execute every week
+    - cron: "0 0 * * 0"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31.8.0
+
+      - name: Check Flake
+        run: nix flake check --all-systems
