@@ -14,6 +14,6 @@
   { name = "tudo"; id = 5411; hash = "sha256-/aRaVJIGNkmMNb2gIL04/l+N5cqU/bJzxod9DR4/NeQ="; }
   { name = "tum"; id = 5155; hash = "sha256-MhkJhdgyx4F+7xtWAHsjIcLD8zH3sK8cA5P6IDlllHY="; }
   { name = "udl"; id = 5824; hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM="; }
-  { name = "roskilde"; id = 949; hash = "sha256-OBPXTDs4Bm+TIdR4r5hP087F3pte9CyL3+Re2yN5OIs="; }
+  { name = "roskilde"; id = 949; hash = "sha256-OHDUOWRT6jak8uKRnwDI7WBAsG0AuiHekOQ8LOnzchQ="; }
   { name = "vccs"; id = 11835; hash = "sha256-iMvG6oEoa7HvIkZwaOsU1tUuGnHk8+LNHlzlRPeZa44="; }
 ]
