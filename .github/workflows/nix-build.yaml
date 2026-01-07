@@ -21,14 +21,19 @@ jobs:
       - name: Check Flake
         run: nix flake check --all-systems
 
+  create-pr:
+    runs-on: ubuntu-latest
+    needs: build
+    if: needs.build.result == 'failure'
+    steps:
       - name: Rebuild with Python
-        if: failure()
         run: ./update.py
 
       - name: Create Pull Request
+        if: 
         uses: peter-evans/create-pull-request@v8
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           add-paths: universities.nix
