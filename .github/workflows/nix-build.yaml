@@ -20,3 +20,25 @@ jobs:
 
       - name: Check Flake
         run: nix flake check --all-systems
+
+      - name: Rebuild with Python
+        if: failure()
+        run: ./update.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.PAT }}
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          add-paths: universities.nix
+          delete-branch: true
+          commit-message: fix: update hashes
+          title: Updated hashes in universities.nix
+          body: |
+            Automatic pull request generated with `update.py`.
+          labels: |
+            bug
+          assignees: MayNiklas
+          reviewers: MayNiklas
+          draft: false
