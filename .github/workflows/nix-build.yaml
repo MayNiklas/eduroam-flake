@@ -33,7 +33,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
           add-paths: universities.nix
           delete-branch: true
-          commit-message: fix: update hashes
+          commit-message: "fix: update hashes"
           title: Updated hashes in universities.nix
           body: |
             Automatic pull request generated with `update.py`.
