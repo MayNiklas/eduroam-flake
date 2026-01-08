@@ -36,7 +36,7 @@ jobs:
 
       - name: Rebuild with Python
         run: |
-          nix-shell -p "python3.withPackages (ps: with ps; [ requests ])" --run "python update.py"
+          ./update.py
 
       - name: Create Pull Request
         if: 
