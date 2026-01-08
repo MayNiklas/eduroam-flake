@@ -24,7 +24,7 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ always() && needs.build.result == 'failure' }}
+    if: ${{ always() && needs.build.result == 'failure' && github.event_name != 'pull_request' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
@@ -39,7 +39,7 @@ jobs:
           ./update.py
 
       - name: Create Pull Request
-        if: 
+        if:
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
