@@ -13,7 +13,7 @@
   { name = "siegen"; id = 5356; hash = "sha256-oiCKmaFXbLz+q8bbYx7ZkstDr0bQOOUv/mcktMzFQ90="; }
   { name = "strathclyde"; id = 2316; hash = "sha256-pJ8geu1MToF9VSJth+BgJ/ut0rwBnseGD+WILsPcWZI="; }
   { name = "tudo"; id = 5411; hash = "sha256-/aRaVJIGNkmMNb2gIL04/l+N5cqU/bJzxod9DR4/NeQ="; }
-  { name = "tum"; id = 5155; hash = "sha256-MhkJhdgyx4F+7xtWAHsjIcLD8zH3sK8cA5P6IDlllHY="; }
+  { name = "tum"; id = 5155; hash = "sha256-0FELjiGqu+AVyakjjsrZBAub11SRriEzB5ff+xqOLy4="; }
   { name = "udl"; id = 5824; hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM="; }
   { name = "vccs"; id = 11835; hash = "sha256-iMvG6oEoa7HvIkZwaOsU1tUuGnHk8+LNHlzlRPeZa44="; }
   { name = "unimi"; id = 13554; hash = "sha256-CW7UYVmrP60yv9ZCN1CbfO5a6ThSDqhE29Dizm3MF7I="; }
