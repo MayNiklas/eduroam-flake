@@ -86,6 +86,40 @@ To build a Nix package, just run `nix build .#install-eduroam-bonn`.
 The result will be in `result`. You can run it with `./result/bin/install-eduroam-bonn`.
 Reviewing this file manually tells us a lot about how Nix works!
 
+## NixOS module (NetworkManager)
+
+Declaratively adds the eduroam connection(s) of your university to NetworkManager.
+The settings and CA certificate are extracted from the installer at build time (import from derivation).
+Only PEAP and TTLS universities are supported.
+
+```nix
+{
+  inputs.eduroam-flake.url = "github:mayniklas/eduroam-flake";
+
+  outputs = { nixpkgs, eduroam-flake, ... }: {
+    nixosConfigurations.example = nixpkgs.lib.nixosSystem {
+      modules = [
+        eduroam-flake.nixosModules.default
+        {
+          networking.networkmanager.enable = true;
+          networking.eduroam = {
+            enable = true;
+            university = "tum";
+            username = "ab12cde"; # the realm is appended if there is no @
+            # optional, a file containing only the password, e.g. a sops secret
+            # without it, NetworkManager asks once and stores it in the keyring
+            passwordFile = "/run/secrets/eduroam";
+          };
+        }
+      ];
+    };
+  };
+}
+```
+
+If the build fails with `hash mismatch in fixed-output derivation`, the installer of your university changed: run `nix flake update eduroam-flake` once the hashes are updated here.
+If the connection fails, check `journalctl -u eduroam-password -u NetworkManager-ensure-profiles`.
+
 ## Supported Universities:
 
 | University                        | entityID | command                                 |
