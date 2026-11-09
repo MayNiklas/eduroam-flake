@@ -39,7 +39,8 @@ jobs:
           ./update.py
 
       - name: Create Pull Request
-        if:
+        # update.py fails if a university cannot be updated, the others are still updated
+        if: ${{ !cancelled() }}
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

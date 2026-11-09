@@ -57,7 +57,7 @@
               value = ({ name
                        , id
                        , hash ? ""
-                       ,
+                       , ...
                        }:
                 let
                   script = pkgs.fetchurl {
