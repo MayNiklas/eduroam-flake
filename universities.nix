@@ -1,20 +1,19 @@
 # to add a new university:
-# 1. add a new entry to the list (change the name and id)
-# { name = "new"; id = 1; }
-# 2. run `nix build .\#install-eduroam-new`
-# 3. add the hash from the error to the list entry
+# 1. look up the entityID of the institution with `nix run .#list-eduroam-entityIDs`
+# 2. add a new entry to the list, `profile` is only required if the institution has several CAT profiles
+# { name = "new"; idp = 1; }
+# 3. run `./update.py` to add the id and hash of its installer
 [
-  { name = "bonn"; id = 5133; hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI="; }
-  { name = "flensburg"; id = 5188; hash = "sha256-RrYwPolob6+xwQn8MTPHVLUI/W4oNYAFSAtHEc0dNR0="; }
-  { name = "koeln"; id = 5133; hash = "sha256-2VnpEu2na6HeQADVUdlR4d8IAIS1RP7kXavGRtSgLqI="; }
-  { name = "leipzig"; id = 5674; hash = "sha256-TEYTR8TeRNIIZcUx01j9pfedkk0PF5XuXPAVUyI136E="; }
-  { name = "lund"; id = 1338; hash = "sha256-wFE3m9NKq3RkPXdbwVOuhHkozI2J2qvVjnVwjq9qAK4="; }
-  { name = "roskilde"; id = 949; hash = "sha256-OHDUOWRT6jak8uKRnwDI7WBAsG0AuiHekOQ8LOnzchQ="; }
-  { name = "siegen"; id = 5356; hash = "sha256-oiCKmaFXbLz+q8bbYx7ZkstDr0bQOOUv/mcktMzFQ90="; }
-  { name = "strathclyde"; id = 2316; hash = "sha256-pJ8geu1MToF9VSJth+BgJ/ut0rwBnseGD+WILsPcWZI="; }
-  { name = "tudo"; id = 5411; hash = "sha256-/aRaVJIGNkmMNb2gIL04/l+N5cqU/bJzxod9DR4/NeQ="; }
-  { name = "tum"; id = 5155; hash = "sha256-MhkJhdgyx4F+7xtWAHsjIcLD8zH3sK8cA5P6IDlllHY="; }
-  { name = "udl"; id = 5824; hash = "sha256-J4fJkCrncDWPJPoXFz3kC7Qwiz1ip/XpgBYVLafc8YM="; }
-  { name = "vccs"; id = 11835; hash = "sha256-iMvG6oEoa7HvIkZwaOsU1tUuGnHk8+LNHlzlRPeZa44="; }
-  { name = "unimi"; id = 13554; hash = "sha256-CW7UYVmrP60yv9ZCN1CbfO5a6ThSDqhE29Dizm3MF7I="; }
+  { name = "bonn"; idp = 5138; id = 5133; hash = "sha256-1d16Lh3Nidudf4HPLVk+XNkPFCFQLhovQRtby1FCJNA="; }
+  { name = "flensburg"; idp = 5186; id = 5188; hash = "sha256-pOBEIJDNMMYlaUeS9emqieVSl+UmV/2S5TPRaU6TEjY="; }
+  { name = "koeln"; idp = 5133; id = 5440; hash = "sha256-PYT4zIT1zYGLjf2iLCKwdpHFIerXJ9LblLQVTD+tNbw="; }
+  { name = "leipzig"; idp = 5198; profile = "Uni Leipzig"; id = 16715; hash = "sha256-bpWQHzM/znDrEyXilRTOcxmzJ83q8xeaQOtflvb6xbY="; }
+  { name = "lund"; idp = 433; id = 1338; hash = "sha256-FWSqG5T7FBsH85b2w5P6N8c3eIzNQ68TJ6z2X76Cy1k="; }
+  { name = "roskilde"; idp = 562; profile = "Roskilde University's Eduroam"; id = 949; hash = "sha256-qzQINQ09CCNGhLF1YEsdTBGfVKf4m1XmucgnYpg7tRs="; }
+  { name = "strathclyde"; idp = 140; id = 2316; hash = "sha256-Sr+ZN3N967y10SgryCODiOOs3VKMcileTK+sOWnU444="; }
+  { name = "tudo"; idp = 5208; id = 5411; hash = "sha256-IUi9yM/q06zj1VlBAzxoQDk9IxoW6wk+8HQRY1TkX38="; }
+  { name = "tum"; idp = 5162; id = 5155; hash = "sha256-RlCWHbzBdR3BTes+gpprraOMP4fJYGpV2Y+ot2EWv/Q="; }
+  { name = "udl"; idp = 888; id = 5824; hash = "sha256-90+TRr2F/Bhvk2br6A7DdT/ofahhzqmsrdkis6HwsIM="; }
+  { name = "vccs"; idp = 8668; id = 11835; hash = "sha256-wX/kyqcSgnrntw1FIa0kYUAsCDIP9wZTiXIFcio5aYE="; }
+  { name = "unimi"; idp = 579; profile = "Eduroam unimi - Università degli Studi di Milano"; id = 13554; hash = "sha256-pIkUIjPnLIgHC5XeH73gGe7ao+fuUGLk0guD9FXCIWk="; }
 ]

@@ -73,13 +73,12 @@ Find your University's entityID:
 nix run .#list-eduroam-entityIDs
 ```
 
-Then add your university to the list using it's name and the id that is used to fetch the script.
+Then add your university to `universities.nix` using its name and entityID.
+If your university offers several profiles, also add the name of the profile.
+
+Then run `./update.py` to add the id and the hash of the python script.
 
 Then run the `nix run` command.
-
-The first run will fail, because the hash of the python script is not known yet.
-The error message will tell you the hash of the python script.
-Add the hash to the university's entry.
 
 Nice to know:
 To build a Nix package, just run `nix build .#install-eduroam-bonn`.
@@ -91,15 +90,14 @@ Reviewing this file manually tells us a lot about how Nix works!
 | University                        | entityID | command                                 |
 | --------------------------------- | -------- | --------------------------------------- |
 | Universität Bonn                  | 5138     | `nix run .#install-eduroam-bonn`        |
-| Hochschule Flensburg              | 5188     | `nix run .#install-eduroam-flensburg`   |
+| Hochschule Flensburg              | 5186     | `nix run .#install-eduroam-flensburg`   |
 | Universität Köln                  | 5133     | `nix run .#install-eduroam-koeln`       |
-| Lund University                   | 1338     | `nix run .#install-eduroam-lund`        |
-| Universität Siegen                | 5356     | `nix run .#install-eduroam-siegen`      |
-| University Leipzig                | 5674     | `nix run .#install-eduroam-leipzig`     |
-| Virginia Community College System | 11835    | `nix run .#install-eduroam-vccs`        |
-| University of Strathclyde         | 2316     | `nix run .#install-eduroam-strathclyde` |
-| University of Lleida              | 5824     | `nix run .#install-eduroam-udl`         |
-| Technical University of Munich    | 5155     | `nix run .#install-eduroam-tum`         |
+| Lund University                   | 433      | `nix run .#install-eduroam-lund`        |
+| University Leipzig                | 5198     | `nix run .#install-eduroam-leipzig`     |
+| Virginia Community College System | 8668     | `nix run .#install-eduroam-vccs`        |
+| University of Strathclyde         | 140      | `nix run .#install-eduroam-strathclyde` |
+| University of Lleida              | 888      | `nix run .#install-eduroam-udl`         |
+| Technical University of Munich    | 5162     | `nix run .#install-eduroam-tum`         |
 | TU Dortmund University            | 5208     | `nix run .#install-eduroam-tudo`        |
-| Roskilde University               | 949      | `nix run .#install-eduroam-roskilde`    |
-| Università degli Studi di Milano  | 13554    | `nix run .#install-eduroam-unimi`       |
+| Roskilde University               | 562      | `nix run .#install-eduroam-roskilde`    |
+| Università degli Studi di Milano  | 579      | `nix run .#install-eduroam-unimi`       |
